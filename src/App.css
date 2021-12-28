@@ -1,38 +1,91 @@
-.App {
+body{
+  background-color: black;
+}
+table{
+  border-collapse: collapse;
+}
+table td{
+  padding: 0; 
+  margin: 0;
+}
+header {
+  font-size: 1em;
+  font-weight: bold;
+  color:white;
+  position: fixed;
+  background-color: black;
+  max-height: 5em;
+  top:0;
+  margin:auto;
+  text-align: center;
+  right:0;
+  width:100%;
+  box-sizing: border-box;
+}
+.flex-header{
+  display: flex;
+  justify-content: space-between;
+  margin:1em;
+}
+.flex-header>div{
+  vertical-align: middle;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex-header>div.address{
+  font-size: 0.5em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance{
+  font-size: 3em;
 }
-
-.App-header {
+.balance>b{
+  font-size: 1.25em;
+  font-weight: bolder;
+}
+.lands{
+  margin-top:5em;
+}
+.coord-btn {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 64px;
+  height: 64px;
   color: white;
+  border:0px solid;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
 }
-
-.App-link {
-  color: #61dafb;
+.coord-btn:hover {
+  background-color: #393f4b;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coord-btn.available{
+  border: 2px solid rgb(32, 32, 32);
+  background-color: rgb(49, 49, 49);
+}
+.coord-btn.available:hover {
+  background-color: rgb(75, 75, 75);
+}
+.coord-btn.reserved{
+  background-color: rgb(112, 112, 112);
+}
+.coord-btn.reserved:hover{
+  cursor:not-allowed;
+  background-color: rgb(112, 112, 112);
+}
+.coord-btn.sponsored{
+  background-color: darkslateblue;
+}
+.coord-btn.sponsored:hover {
+  cursor:not-allowed;
+  background-color: darkslateblue;
+}
+.coord-btn.unavailable{
+  cursor:not-allowed;
+  border: 2px solid rgb(86, 171, 255);
+  background-color: dodgerblue;
+}
+.coord-btn.unavailable:hover{
+  cursor:not-allowed;
+  background-color: dodgerblue;
 }
