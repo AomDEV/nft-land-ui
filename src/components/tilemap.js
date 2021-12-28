@@ -13,7 +13,7 @@ function TileMap(props) {
     const wallet = useWallet();
 
     const noOwner = "0x0000000000000000000000000000000000000000";
-    const approveContract = "0x0B52539f093a0f5564F889A45d17b1ab576D15DC";
+    const approveContract = "0x9D93C401204859143CbfC1185bc8541e124e14bC";
     const approveAmount = Web3().utils.toWei((100*100).toString());
 
     const [zoneList, setZoneList] = React.useState([]);
@@ -195,7 +195,7 @@ function TileMap(props) {
             topics: ['0x98b4f5c80a99400b088535d5058fa717c907e424a336a2a5ac0668ab154b5c21']
         }, callback);
     }
-    
+
     function subscribeStorage(callback){
         const c = "0x9D93C401204859143CbfC1185bc8541e124e14bC";
         return Web3().eth.subscribe("logs", {
